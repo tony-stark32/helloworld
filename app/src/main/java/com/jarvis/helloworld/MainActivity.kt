@@ -18,7 +18,9 @@ class MainActivity : AppCompatActivity() {
 
     val btn: Button =findViewById(R.id.button)
     btn.setOnClickListener(){
-    Toast.makeText(this@MainActivity,"clicked",Toast.LENGTH_SHORT).show()
+    Toast.makeText(this@MainActivity,""+editTextInput,Toast.LENGTH_SHORT).show()
+
+        val edt: EditText =findViewById(R.id.EditText1)
 }
 }
 }
