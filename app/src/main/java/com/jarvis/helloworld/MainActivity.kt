@@ -2,20 +2,23 @@ package com.jarvis.helloworld
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
 import com.jarvis.helloworld.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        val view = binding.root
-        setContentView(view)
 
-        binding.button.setOnClickListener {
-            Toast.makeText(this, "hello", Toast.LENGTH_SHORT).show()
-        }
-    }
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+    val et:EditText =findViewById(R.id.EditText1)
+    val editTextInput = et.text
+
+    val btn: Button =findViewById(R.id.button)
+    btn.setOnClickListener(){
+    Toast.makeText(this@MainActivity,"clicked",Toast.LENGTH_SHORT).show()
+}
+}
 }
